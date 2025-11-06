@@ -40,7 +40,7 @@
                     <div>
                         <label class="form-label text-light" for="km"><strong>Quanti KM farà il tuo cavallo
                                 ?</strong></label>
-                        <input class="form-control bg-dark-subtle" type="number" id="km" placeholder="Numero KM">
+                        <input class="form-control bg-dark-subtle" type="number" id="km" placeholder="numero da 1 a 10">
                     </div>
                     <!-- FINE KILOMETRI -->
 
@@ -90,12 +90,33 @@
 
 
         <!-- RISULTATO SCOMMESSA  -->
-        <div class="row d-none" id="result" >
-            <div class="col d-flex justify-content-center bg-dark bg-gradient text-light">
-                <h1>RACE</h1>
-                
+        <div class="row d-none bg-dark bg-gradient text-light py-4" id="result">
+            <h1 class="text-center">RACE</h1>
+            <div class="col-6 d-flex flex-column">
 
-            </div> 
+                <!-- UTENTE -->
+                <div class="mt-2">nome</div>
+                <!-- FINE UTENTE -->
+
+                <!-- KILOMETRI UTENTE -->
+                <div class="mt-2">km</div>
+                <!-- FINE KILOMETRI UTENTE -->
+
+                <!-- ETA UTENTE -->
+                <div class="mt-2">età</div>
+                <!-- FINE ETA UTENTE -->
+
+                <!-- SOLDI SCOMMESSI UTENTE -->
+                <div class="mt-4">soldi scommessi</div>
+                <!-- FINE SOLDI SCOMMESSI UTENTE -->
+            </div>
+            <div class="col-6 d-flex flex-column align-items-center">
+
+                <!-- KILOMETRI GENERATI DAL PC -->
+                <div>km computer</div>
+                <!-- FINE SOLDI GENERATI DAL PC -->
+
+            </div>
         </div>
         <!-- FINE RISULTATO SCOMMESSA -->
 

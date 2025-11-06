@@ -34,7 +34,7 @@ formElem.addEventListener("submit", function (event) {
 
     
     resultElem.classList.remove("d-none")
-
+    
     
 
 
@@ -49,6 +49,11 @@ formElem.addEventListener("reset", function() {
 })
 
 
+
+//funzione per generare un numero casuale da 1 a 10 
 function getRandomNumber() {
-    let randomNumber = Math.floor
+    let randomNumber = parseInt(Math.floor(Math.random() * 10) + 1);
+    return randomNumber;
 }
+
+
