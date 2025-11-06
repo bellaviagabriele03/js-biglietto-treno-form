@@ -14,28 +14,53 @@
 
 
 
-const formElem = document.querySelector("form")
-const userElem = document.querySelector("#name")
-const kmElem = document.querySelector("#km")
-const ageElem = document.querySelector("#age")
-const moneyElem = document.querySelector("#money")
-const btnSubmitElem = document.querySelector("#submit")
-const btnResetElem = document.querySelector("#reset")
-const resultElem = document.querySelector("#result")
+const formElem = document.querySelector("form");
+const userElem = document.querySelector("#name");
+const kmElem = document.querySelector("#km");
+const ageElem = document.querySelector("#age");
+const moneyElem = document.querySelector("#money");
+const btnSubmitElem = document.querySelector("#submit");
+const btnResetElem = document.querySelector("#reset");
+
+const resultElem = document.querySelector("#result");
+const resultUser = document.querySelector("#resultuser");
+const resultKM = document.querySelector("#resultkm");
+const resultAge = document.querySelector("#resultage");
+const resultMoney = document.querySelector("#resultmoney");
+const resultComputer = document.querySelector("#kmpc");
+const resultDecreto = document.querySelector("#decret")
+
+
+
 
 
 formElem.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const user = userElem.value; 
+
+
+
+    const user = userElem.value;
     const km = parseInt(kmElem.value);
     const age = ageElem.value;
     const money = parseInt(moneyElem.value)
 
-    
     resultElem.classList.remove("d-none")
+
+    //Visualizzazione in pagina 
+    resultUser.innerHTML = user;
+    resultKM.innerHTML = `BET: ${km} km`;
+    resultAge.innerHTML = age;
+    resultMoney.innerHTML = `Soldi scommessi: ${money} €`;
+    let kmComputer = getRandomNumber();
+    resultComputer.innerHTML = `Il Cavallo Booleano ha corso per:  ${kmComputer} Kilometri`
+
     
-    
+    if(km === kmComputer) {
+        resultDecreto.innerHTML = "Hai Vinto : D"
+    }else {
+        resultDecreto.innerHTML = "Hai perso : ("
+    }
 
 
 
@@ -44,8 +69,10 @@ formElem.addEventListener("submit", function (event) {
 
 })
 
-formElem.addEventListener("reset", function() {
-    resultElem.classList.add("d-none")    
+
+
+formElem.addEventListener("reset", function () {
+    resultElem.classList.add("d-none")
 })
 
 
