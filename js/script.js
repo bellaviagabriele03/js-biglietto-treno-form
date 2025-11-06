@@ -49,35 +49,36 @@ formElem.addEventListener("submit", function (event) {
 
 
     // Chiedere al supremo tutor se la condizione del "if" è corretta 
-    if(user === "" || km === isNaN || age === isNaN || money === isNaN) {
+    if (user === "" || km === isNaN || age === isNaN || money === isNaN) {
         alert("Loris non vuole che scommetti")
+
+    } else {
+        resultElem.classList.remove("d-none")
+
+
+
+
+
+        //Visualizzazione in pagina 
+        resultUser.innerHTML = user;
+        resultKM.innerHTML = `BET: ${km} km`;
+        resultAge.innerHTML = age;
+        resultMoney.innerHTML = `Soldi scommessi: ${money} €`;
+        let kmComputer = getRandomNumber();
+        resultComputer.innerHTML = `Il Cavallo Booleano ha corso per:  ${kmComputer} Kilometri`
         
-    }else {
-         resultElem.classList.remove("d-none")
+         if (age === "Minorenne") {
+            alert("Chiedi a Loris se puoi giocare !")
 
+        }
 
+        if (km === kmComputer) {
+            resultDecreto.innerHTML = "Hai Vinto : D"
+        } else {
+            resultDecreto.innerHTML = "Hai perso : ("
+        }
 
-
-
-    //Visualizzazione in pagina 
-    resultUser.innerHTML = user;
-    resultKM.innerHTML = `BET: ${km} km`;
-    resultAge.innerHTML = age;
-    resultMoney.innerHTML = `Soldi scommessi: ${money} €`;
-    let kmComputer = getRandomNumber();
-    resultComputer.innerHTML = `Il Cavallo Booleano ha corso per:  ${kmComputer} Kilometri`
-
-
-    if(km === kmComputer) {
-        resultDecreto.innerHTML = "Hai Vinto : D"
-    }else {
-        resultDecreto.innerHTML = "Hai perso : ("
-    }
-
-    if(age === "Minorenne") {
-        alert("Chiedi a Loris se puoi giocare !")
-
-    }
+       
 
     }
 
@@ -87,7 +88,7 @@ formElem.addEventListener("submit", function (event) {
 
 
 
-   
+
 
 
 
