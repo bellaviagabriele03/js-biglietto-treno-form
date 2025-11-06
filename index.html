@@ -4,15 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Train</title>
+    <title>Cavalli</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <h1 class="py-5 text-center bg-secondary">HORSE RACE<i class="fa-solid fa-horse-head fa-spin fa-spin-reverse"></i>
+    </h1>
+    <div class="container">
+
+        <span> </span>
+        <!-- FORM -->
+        <form action="">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-evenly py-5 bg-black bg-gradient">
+
+                    <!-- NOME E COGNOME -->
+                    <div>
+                        <label class="form-label text-light" for="name"><strong>SCOMMETTITORE</strong></label>
+                        <input class="form-control bg-dark-subtle" type="text" id="name" placeholder="Nome&Cognome">
+                    </div>
+                    <!-- FINE NOME E COGNOME -->
+
+                    <!-- KILOMETRI  -->
+                    <div>
+                        <label class="form-label text-light" for="km"><strong>Quanti KM farà il tuo cavallo
+                                ?</strong></label>
+                        <input class="form-control bg-dark-subtle" type="number" id="km" placeholder="Numero KM">
+                    </div>
+                    <!-- FINE KILOMETRI -->
+
+                    <!-- FASCIA ETA'  -->
+                    <div>
+                        <label class="form-label text-light" for="age"><strong>Hai l'età per scommettere
+                                ?</strong></label>
+                        <select name="" id="age" class="form-select bg-dark-subtle">
+                            <option selected>Scegli un opzione</option>
+                            <option value="1">Anziano</option>
+                            <option value="2">Maggiorenne</option>
+                            <option value="3">Minorenne</option>
+                        </select>
+                    </div>
+                    <!-- FINE FASCIA ETA' -->
+
+                    <!-- SOLDI  -->
+                    <div>
+                        <label class="form-label text-light" for="money">Quanto vuoi scommettere ?</label>
+                        <input type="number" id="money" class="form-control bg-dark-subtle" placeholder="$$$$$$">
+                    </div>
+                    <!-- FINE SOLDI -->
+
+                </div>
+
+
+                <!-- COLONNA DEI BOTTONI -->
+                <div class="col-12 d-flex justify-content-evenly my-4">
+                    <!-- BOTTONE GENERA BIGLIETTO  -->
+                    <div>
+                        <button type="submit" id="submit" class="btn btn-danger text-black">Scommetti <i
+                                class="fa-brands fa-bitcoin fa-bounce"></i></button>
+                    </div>
+                    <!-- FINE BOTTONE GENERA BIGLIETTO -->
+
+                    <!-- BOTTONE ANNULLA  -->
+                    <div>
+                        <button type="reset" id="reset" class="btn btn-dark">Dichiara Banca Rotta <i
+                                class="fa-solid fa-skull-crossbones fa-fade"></i></button>
+                    </div>
+                    <!-- FINE BOTTONE ANNULLA -->
+                </div>
+                <!-- FINE COLONNA BOTTONI -->
+            </div>
+        </form>
+        <!-- END FORM -->
+
+
+        <!-- RISULTATO SCOMMESSA  -->
+        <div class="row d-none" id="result" >
+            <div class="col d-flex justify-content-center bg-dark bg-gradient text-light">
+                <h1>RACE</h1>
+                
+
+            </div> 
+        </div>
+        <!-- FINE RISULTATO SCOMMESSA -->
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
     <script src="./js/script.js"></script>
 </body>
 
