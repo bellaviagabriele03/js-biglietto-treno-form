@@ -49,7 +49,7 @@ formElem.addEventListener("submit", function (event) {
 
 
     // Chiedere al supremo tutor se la condizione del "if" è corretta 
-    if (user === "" || km === isNaN || age === isNaN || money === isNaN) {
+    if (user === "" || isNaN(km) || isNaN(money)) {
         alert("Loris non vuole che scommetti")
 
     } else {
@@ -66,7 +66,7 @@ formElem.addEventListener("submit", function (event) {
         resultMoney.innerHTML = `Soldi scommessi: ${money} €`;
         let kmComputer = getRandomNumber();
         resultComputer.innerHTML = `Il Cavallo Booleano ha corso per:  ${kmComputer} Kilometri`
-        
+
          if (age === "Minorenne") {
             alert("Chiedi a Loris se puoi giocare !")
 
@@ -74,6 +74,7 @@ formElem.addEventListener("submit", function (event) {
 
         if (km === kmComputer) {
             resultDecreto.innerHTML = "Hai Vinto : D"
+            
         } else {
             resultDecreto.innerHTML = "Hai perso : ("
         }
